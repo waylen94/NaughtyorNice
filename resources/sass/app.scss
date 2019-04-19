@@ -1,5 +1,251 @@
 // Variables
-@import 'variables';
+@import '_variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// Global styling for this template
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+// Typography
+.text-white-75 {
+  color: fade-out($white, .25);
+}
+
+// Custom horizontal rules
+hr.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: $primary;
+}
+
+hr.light {
+  border-color: $white;
+}
+
+// Button restyling
+.btn {
+  font-family: $font-family-sans-serif;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+// Page section padding (testing phase i will detele)
+.page-section1 {
+  padding: 8rem 0;
+	background: linear-gradient(to bottom, #{fade-out($red, .2)} 0%,#{fade-out($red, .2)} 100%)
+}
+.page-section2 {
+  padding: 8rem 0;
+background: linear-gradient(to bottom, #{fade-out($orange, .2)} 0%,#{fade-out($orange, .2)} 100%)
+}
+.page-section3{
+  padding: 8rem 0;
+background: linear-gradient(to bottom, #{fade-out($teal, .2)} 0%,#{fade-out($teal, .2)} 100%)
+}
+.page-section4{
+  padding: 8rem 0;
+background: linear-gradient(to bottom, #{fade-out($purple, .2)} 0%,#{fade-out($purple, .2)} 100%)
+}
+.page-section5{
+  padding: 8rem 0;
+background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cyan, .2)} 100%)
+}
+
+
+
+
+
+
+
+
+// Base styling for the navbar
+#mainNav {
+  box-shadow: $box-shadow;
+  background-color: $white;
+  transition: background-color 0.2s ease;
+  .navbar-brand {
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $gray-600;
+        font-family: $font-family-sans-serif;
+        font-weight: $font-weight-bold;
+        font-size: 0.9rem;
+        padding: 0.75rem 0;
+        &:hover,
+        &:active {
+          color: $primary;
+        }
+        &.active {
+          color: $primary !important;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    // Base styling for the navbar - screen sizes greater than the large breakpoint
+    box-shadow: none;
+    background-color: transparent;
+    .navbar-brand {
+      color: fade-out($white, .3);
+      &:hover {
+        color: $white;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: fade-out($white, .3);
+          padding: 0 1rem;
+          &:hover {
+            color: $white;
+          }
+        }
+        &:last-child {
+          .nav-link {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    // Navbar styling applied when the page is scrolled
+    &.navbar-scrolled {
+      box-shadow: $box-shadow;
+      background-color: $white;
+      .navbar-brand {
+        color: $gray-900;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $gray-900;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// customered scss file
+@import "_masthead";
+
+// orange-circle-button
+
+.orange-circle-button {
+	box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
+	border: .5em solid #E84D0E;
+	font-size: 1em;
+	line-height: 1.1em;
+	color: #ffffff;
+	background-color: rgb(232, 113, 15);
+	margin: auto;
+	border-radius: 50%;
+	height: 7em;
+	width: 7em;
+	position: relative;
+}
+.orange-circle-button:hover {
+	color:#ffffff;
+    background-color: rgb(232, 113, 15);
+	text-decoration: none;
+	border-color: #ff7536;
+	
+}
+.orange-circle-button:visited {
+	color:#ffffff;
+    background-color: rgb(232, 113, 15);
+	text-decoration: none;
+	
+}
+.orange-circle-link-greater-than {
+    font-size: 1em;
+}
+
+/* Prevent scrollbars to appear when waves go out of bound */
+.sonar-wrapper {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding: 8rem 0;
+  height: 100%;
+}
+
+/* The circle */
+.sonar-emitter {
+  position: relative;
+  margin:auto;
+  width: 275px;
+  height: 275px;
+  border-radius: 9999px;
+  background-color: HSL(45,100%,50%);
+}
+
+/* the 'wave', same shape and size as its parent */
+.sonar-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: HSL(45,100%,50%);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*
+  Animate!
+  NOTE: add browser prefixes where needed.
+*/
+.sonar-wave {
+  animation: sonarWave 2s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
