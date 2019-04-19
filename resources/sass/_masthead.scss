@@ -3,8 +3,8 @@
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - #{$navbar-height});
-  background:linear-gradient(to bottom, #{fade-out($green, .2)} 0%,#{fade-out($green, .2)} 100%);
-// linear-gradient(to bottom, #{fade-out($green, .2)} 0%,#{fade-out($green, .2)} 100%), url('/img/bg-masthead.jpg');
+  //background:linear-gradient(to bottom, #{fade-out($green, .2)} 0%,#{fade-out($green, .2)} 100%);
+	background:linear-gradient(to bottom, #{fade-out($green, .2)} 0%,#{fade-out($green, .2)} 100%), url('https://source.unsplash.com/user/erondu/1600x900');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
