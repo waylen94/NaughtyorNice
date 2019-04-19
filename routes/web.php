@@ -11,5 +11,8 @@
 |
 */
 
-
+//homepage--tentatively defined as root -waylen
 Route::get('/', 'PagesController@root')->name('root');
+
+//signup page router
+Route::get('signup', 'UsersController@create')->name('signup');

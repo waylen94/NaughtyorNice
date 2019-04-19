@@ -1,5 +1,5 @@
 
- <section class="page-section5">
+ <section class="page-section5" id="page-section5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
