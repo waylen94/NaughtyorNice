@@ -22,12 +22,9 @@
 @include('layouts._header')
 
 <div class="container">
-
 @include('shared._messages')
-
-
-
 </div>
+
 @yield('content')
 
 @include('layouts._footer')
