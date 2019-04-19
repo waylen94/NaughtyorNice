@@ -32,7 +32,7 @@ return [
     |                    "custom", "stack"
     |
     */
-
+    'default' => env('LOG_CHANNEL', 'stack'),
     'channels' => [
         'stack' => [
             'driver' => 'stack',
