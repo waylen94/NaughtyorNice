@@ -1,10 +1,5 @@
 <?php
 
-
-
-
-
-
 use Illuminate\Support\Facades\Route;
 
 function route_class()
