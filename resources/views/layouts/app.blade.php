@@ -18,20 +18,19 @@
 
 <body>
 
-@include('layouts._header')
 
+@include('layouts._header')
 <div class="container">
 @include('shared._messages')
 </div>
-
 @yield('content')
-
 @include('layouts._footer')
-</div>
 
 
 
 <!-- Scripts -->
+
+
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
