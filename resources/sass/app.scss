@@ -247,5 +247,15 @@ background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cya
     margin-right: auto;
 }
 
+/* User register page */
+.register-page {
+  img.captcha {
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 3px;
+  }
+}
+
 
 
