@@ -49,23 +49,23 @@ hr.light {
 // Page section padding (testing phase i will detele)
 .page-section1 {
   padding: 8rem 0;
-	background: linear-gradient(to bottom, #{fade-out($red, .2)} 0%,#{fade-out($red, .2)} 100%)
+	background: linear-gradient(to bottom, #{fade-out($red, .2)} 0%,#{fade-out($red, .2)} 100%);
 }
 .page-section2 {
   padding: 8rem 0;
-background: linear-gradient(to bottom, #{fade-out($orange, .2)} 0%,#{fade-out($orange, .2)} 100%)
+background: linear-gradient(to bottom, #{fade-out($orange, .2)} 0%,#{fade-out($orange, .2)} 100%);
 }
 .page-section3{
   padding: 8rem 0;
-background: linear-gradient(to bottom, #{fade-out($teal, .2)} 0%,#{fade-out($teal, .2)} 100%)
+background: linear-gradient(to bottom, #{fade-out($teal, .2)} 0%,#{fade-out($teal, .2)} 100%);
 }
 .page-section4{
   padding: 8rem 0;
-background: linear-gradient(to bottom, #{fade-out($purple, .2)} 0%,#{fade-out($purple, .2)} 100%)
+background: linear-gradient(to bottom, #{fade-out($purple, .2)} 0%,#{fade-out($purple, .2)} 100%);
 }
 .page-section5{
   padding: 8rem 0;
-background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cyan, .2)} 100%)
+background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cyan, .2)} 100%);
 }
 
 
@@ -249,12 +249,23 @@ background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cya
 
 /* User register page */
 .register-page {
+	#register{
+		padding: 4rem 0;
+		background: linear-gradient(to bottom, #{fade-out($blue, .2)} 0%,#{fade-out($blue, .2)} 100%);
+	}
+	
   img.captcha {
     cursor: pointer;
     border: 1px solid #ced4da;
     border-radius: 4px;
     padding: 3px;
   }
+}
+.login-page {
+	#login{
+		padding: 4rem 0;
+		background: linear-gradient(to bottom, #{fade-out($blue, .2)} 0%,#{fade-out($blue, .2)} 100%);
+	}
 }
 
 

@@ -23,7 +23,9 @@
 <div class="container">
 @include('shared._messages')
 </div>
+<div id="app" class="{{ route_class() }}-page">
 @yield('content')
+</div>
 @include('layouts._footer')
 
 
