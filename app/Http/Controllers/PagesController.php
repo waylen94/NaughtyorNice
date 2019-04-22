@@ -10,4 +10,8 @@ class PagesController extends Controller
     {
         return view('pages.root');
     }
+    public function testing_yanan()
+    {
+        return view('testing.testing_line_chart');
+    }
 }
