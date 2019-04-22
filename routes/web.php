@@ -13,6 +13,7 @@
 
 //testing 
 Route::get('testing/yanan', 'PagesController@testing_yanan');
+Route::post('testing/yanan', 'PagesController@testing')-> name('testing');
 
 
 

@@ -14,4 +14,8 @@ class PagesController extends Controller
     {
         return view('testing.testing_line_chart');
     }
+    public function testing()
+    {
+        return view('testing.testing_line_chart');
+    }
 }
