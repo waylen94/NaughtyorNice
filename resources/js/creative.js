@@ -1,3 +1,4 @@
+
 if(document.getElementById('line_chart_canvas')){
 var ctx = document.getElementById('line_chart_canvas').getContext('2d');
 var chart = new Chart(ctx, {
@@ -58,7 +59,7 @@ var chart_line_testing = new Chart(ctx, {
 	        labels: [horizen_1, horizen_2, horizen_3, horizen_4, horizen_5, horizen_6, horizen_7, horizen_8, horizen_9, horizen_10, horizen_11, horizen_12],
 	        datasets: [{
 	        	data: [point_1,point_2, point_3, point_4, point_5, point_6, point_7,point_8,point_9,point_10,point_11,point_12],
-	            label: 'My First dataset',
+	            label: 'Sample',
 	            backgroundColor: 'rgb(255, 99, 132)',
 	            borderColor: 'rgb(255, 99, 132)'
 	            

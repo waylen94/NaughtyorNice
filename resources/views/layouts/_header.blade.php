@@ -7,10 +7,31 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+<!--       <div class="collapse navbar-collapse" id="navbarResponsive"> -->
       
       	
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+<!--         <ul class="navbar-nav ml-auto my-2 my-lg-0"> -->
+<!--           <li class="nav-item"> -->
+<!--             <a class="nav-link js-scroll-trigger" href="#page-section2">Sample</a> -->
+<!--           </li> -->
+<!--           <li class="nav-item"> -->
+<!--             <a class="nav-link js-scroll-trigger" href="#page-section3">Sample</a> -->
+<!--           </li> -->
+<!--           <li class="nav-item"> -->
+<!--             <a class="nav-link js-scroll-trigger" href="#page-section4">Sample</a> -->
+<!--           </li> -->
+<!--           <li class="nav-item"> -->
+<!--             <a class="nav-link js-scroll-trigger" href="#page-section5">Sample</a> -->
+<!--           </li> -->
+<!--         </ul> -->
+        
+        <!-- Right Side Of Navbar -->
+      <ul class="navbar-nav navbar-right">
+        <!-- Authentication Links -->
+        @guest
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Regist</a></li>
+        @else
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#page-section2">Sample</a>
           </li>
@@ -23,15 +44,8 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#page-section5">Sample</a>
           </li>
-        </ul>
-        
-        <!-- Right Side Of Navbar -->
-      <ul class="navbar-nav navbar-right">
-        <!-- Authentication Links -->
-        @guest
-        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Regist</a></li>
-        @else
+          
+          
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px">
@@ -53,6 +67,6 @@
       </ul>
         
         
-      </div>
+<!--       </div> -->
     </div>
   </nav>
