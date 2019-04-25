@@ -37037,7 +37037,7 @@ if (document.getElementById('line_chart_canvas_testing')) {
       labels: [horizen_1, horizen_2, horizen_3, horizen_4, horizen_5, horizen_6, horizen_7, horizen_8, horizen_9, horizen_10, horizen_11, horizen_12],
       datasets: [{
         data: [point_1, point_2, point_3, point_4, point_5, point_6, point_7, point_8, point_9, point_10, point_11, point_12],
-        label: 'My First dataset',
+        label: 'Sample',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)'
       }] //    		options: {
@@ -37110,9 +37110,9 @@ function loadDoc() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vagrant/Code/NaughtyorNice/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/vagrant/Code/NaughtyorNice/resources/js/creative.js */"./resources/js/creative.js");
-module.exports = __webpack_require__(/*! /home/vagrant/Code/NaughtyorNice/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vagrant/Code/naughtyornice/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/vagrant/Code/naughtyornice/resources/js/creative.js */"./resources/js/creative.js");
+module.exports = __webpack_require__(/*! /home/vagrant/Code/naughtyornice/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

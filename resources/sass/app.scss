@@ -267,6 +267,12 @@ background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cya
 		background: linear-gradient(to bottom, #{fade-out($blue, .2)} 0%,#{fade-out($blue, .2)} 100%);
 	}
 }
+.verification-notice-page{
+	#verify{
+		padding: 4rem 0;
+		background: linear-gradient(to bottom, #{fade-out($blue, .2)} 0%,#{fade-out($blue, .2)} 100%);
+	}
+}
 
 
 
