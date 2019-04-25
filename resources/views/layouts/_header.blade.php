@@ -1,4 +1,5 @@
   <!-- Navigation -->
+  <div class = "container">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-static-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Naughty or Nice</a>
@@ -66,6 +67,7 @@
             </li>
             @endguest
       </ul>
+        </div>
         </div>
         
 <!--       </div> -->
