@@ -1,6 +1,7 @@
 <header class="masthead">
     <div class="container">
       <div class="row h-100 align-items-center justify-content-center text-center">
+     @include('shared._messages')
         <div class="col-lg-10 align-self-end">
           <h1 class="text-uppercase text-white font-weight-bold">Naughty or Nice</h1>
 

@@ -21,7 +21,7 @@
 
 @include('layouts._header')
 <div class="container">
-@include('shared._messages')
+<!-- @include('shared._messages') -->
 </div>
 <div id="app" class="{{ route_class() }}-page">
 @yield('content')
