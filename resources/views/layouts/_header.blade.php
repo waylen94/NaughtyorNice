@@ -26,7 +26,8 @@
 <!--         </ul> -->
         
         <!-- Right Side Of Navbar -->
-      <ul class="navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-right ml-auto my-2 my-lg-0">
         <!-- Authentication Links -->
         @guest
         <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
@@ -65,7 +66,7 @@
             </li>
             @endguest
       </ul>
-        
+        </div>
         
 <!--       </div> -->
     </div>
