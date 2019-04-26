@@ -12,48 +12,49 @@
                 <div class="card">
                     <div class="front">
                         <div class="cover">
-                            <img src="img/bg-masthead.jpg" alt="profile Pic" height="200" width="200">
+                            <img src="img/brand_hilton.png" alt="Hilton brand" height="100" width="100">
                         </div>
 <!--                         <div class="user"> -->
 <!--                             <img class="img-circle" src="images/rotating_card_profile3.png"/> -->
 <!--                         </div> -->
                         <div class="content">
                             <div class="main">
-                                <h3 class="name">John Marvel</h3>
-                                <p class="profession">CEO</p>
-                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                <h3 class="name">Hilton Hotels & Resorts</h3>
+                                <p class="profession">Number of locations: 570</p>
+                                <p class="text-center">A global brand of full-service hotels and resorts and the flagship brand of American multinational hospitality company Hilton.</p>
                             </div>
                             <div class="footer">
-                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                                <i class="fa fa-mail-forward">McLean, Virginia, U.S.</i> 
                             </div>
                         </div>
                     </div> <!-- end front panel -->
+                    
                     <div class="back">
                         <div class="header">
-                            <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            <h5 class="motto">Basic Info</h5>
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h4 class="text-center">Job Description</h4>
-                                <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                <h4 class="text-center">Hilton Hotels & Resorts</h4>
+                                 <p class="text-center">Hilton Worldwide Holdings, Inc., a global company based in the United States that owns several hotel chains and subsidiary companies containing the Hilton name</p>
 
                                 <div class="stats-container">
                                     <div class="stats">
-                                        <h4>235</h4>
+                                        <h4>570</h4>
                                         <p>
-                                            Followers
+                                            Locations
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>114</h4>
+                                        <h4>1919</h4>
                                         <p>
-                                            Following
+                                           Founded
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>35</h4>
+                                        <h4>World</h4>
                                         <p>
-                                            Projects
+                                            Area served
                                         </p>
                                     </div>
                                 </div>
@@ -77,50 +78,48 @@
                 <div class="card">
                     <div class="front">
                         <div class="cover">
-                            <img src="img/bg-masthead.jpg"/>
+                            <img src="img/brand_four_season.png" height="100" width="100"/>
                         </div>
 <!--                         <div class="user"> -->
 <!--                             <img class="img-circle" src="images/rotating_card_profile2.png"/> -->
 <!--                         </div> -->
                         <div class="content">
                             <div class="main">
-                                <h3 class="name">Andrew Mike</h3>
-                                <p class="profession">Web Developer</p>
-                                <p class="text-center">"Lamborghini Mercy <br>Your chick she so thirsty <br>I'm in that two seat Lambo"</p>
+                                <h3 class="name">Four Seasons Hotels</h3>
+                                <p class="profession">Number of locations: 112</p>
+                                <p class="text-center">The first stand alone Four Seasons Private Residences will open in London at 20 Grosvenor Square, Mayfair during the second quarter of 2018. It will be the third Four Seasons venue in London.</p>
                             </div>
-                            <div class="footer">
-                                <button class="btn btn-simple" onclick="rotateCard(this)">
-                                    <i class="fa fa-mail-forward"></i> Manual Rotation
-                                </button>
+                            <div class="footer">                            
+                                    <i class="fa fa-mail-forward">	Toronto, Ontario, Canada</i>
                             </div>
                         </div>
                     </div> <!-- end front panel -->
                     <div class="back">
                         <div class="header">
-                            <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            <h5 class="motto">Basic Info</h5>
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h4 class="text-center">Job Description</h4>
-                                <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                <h4 class="text-center">Four Seasons Hotels Limited</h4>
+                                <p class="text-center">WSince 2007, Bill Gates and Prince Al-Waleed bin Talal have been majority owners of the company</p>
 
                                 <div class="stats-container">
                                     <div class="stats">
-                                        <h4>235</h4>
+                                        <h4>112</h4>
                                         <p>
-                                            Followers
+                                            Locations
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>114</h4>
+                                        <h4>1961</h4>
                                         <p>
-                                            Following
+                                            Founded
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>35</h4>
+                                        <h4>World</h4>
                                         <p>
-                                            Projects
+                                            Area Served
                                         </p>
                                     </div>
                                 </div>
@@ -146,51 +145,51 @@
                 <div class="card">
                     <div class="front">
                         <div class="cover">
-                            <img src="img/bg-masthead.jpg"/>
+                            <img src="img/brand_marriot.png" height="100" width="100"/>
                         </div>
 <!--                         <div class="user"> -->
 <!--                             <img class="img-circle" src="images/rotating_card_profile.png"/> -->
 <!--                         </div> -->
                         <div class="content">
                             <div class="main">
-                                <h3 class="name">Inna Corman</h3>
-                                <p class="profession">Product Manager</p>
+                                <h3 class="name">Marriott International</h3>
+                                <p class="profession">Number of locations: 6520</p>
 
-                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                <p class="text-center">American multinational diversified hospitality company that manages and franchises a broad portfolio of hotels and related lodging facilities</p>
                             </div>
                             <div class="footer">
                                 <div class="rating">
-                                    <i class="fa fa-mail-forward"></i> Auto Rotation
+                                    <i class="fa fa-mail-forward">Bethesda, Maryland, U.S.</i>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- end front panel -->
                     <div class="back">
                         <div class="header">
-                            <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            <h5 class="motto">Basic Info</h5>
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h4 class="text-center">Job Description</h4>
-                                <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                <h4 class="text-center">Marriott International</h4>
+                                <p class="text-center">It has 30 brands with more than 7000 properties in 130 countries and territories around the world</p>
 
                                 <div class="stats-container">
                                     <div class="stats">
-                                        <h4>235</h4>
+                                        <h4>6520</h4>
                                         <p>
-                                            Followers
+                                            Locations
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>114</h4>
+                                        <h4>1927</h4>
                                         <p>
-                                            Following
+                                            Founded
                                         </p>
                                     </div>
                                     <div class="stats">
-                                        <h4>35</h4>
+                                        <h4>World</h4>
                                         <p>
-                                            Projects
+                                            Area served
                                         </p>
                                     </div>
                                 </div>
