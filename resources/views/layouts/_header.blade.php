@@ -54,7 +54,7 @@
               {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">Personel</a>
+              <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">Personel</a>
               <a class="dropdown-item" href="">Modify</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">

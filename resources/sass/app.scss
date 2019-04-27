@@ -67,7 +67,10 @@ background: linear-gradient(to bottom, #{fade-out($purple, .2)} 0%,#{fade-out($p
   padding: 8rem 0;
 background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cyan, .2)} 100%);
 }
-
+#user-show{
+	 padding: 8rem 0;
+background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cyan, .2)} 100%);
+}
 
 
 
@@ -273,6 +276,5 @@ background: linear-gradient(to bottom, #{fade-out($cyan, .2)} 0%,#{fade-out($cya
 		background: linear-gradient(to bottom, #{fade-out($blue, .2)} 0%,#{fade-out($blue, .2)} 100%);
 	}
 }
-
 
 
