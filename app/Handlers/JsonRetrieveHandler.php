@@ -5,30 +5,34 @@ namespace App\Handlers;
 
 use GuzzleHttp\Client;
 
-class ImageUploadHandler
+class JsonRetrieveHandler
 {
-    protected $allowed_ext = ["json"];
     
-    public function save($file, $folder, $file_prefix)
+    public function save($file_prefix)
     {
 
-        $folder_name = "uploads/Json/$folder/" ;
-        
-        $upload_path = public_path() . '/' . $folder_name;
+        $folder_name = "uploads/Json" ;
+        $filename = $file_prefix . '.' . "json";
+        $upload_path = resource_path() . '/' . $folder_name . '/'. $filename;
 
-        $extension = strtolower($file->getClientOriginalExtension()) ?: 'json';
         
-        $filename = $file_prefix . '.' . $extension;
+        // retrieve the jason data , in the future the request file will be dynamic
         
-        if ( ! in_array($extension, $this->allowed_ext)) {
-            return false;
-        }
+        $client = new Client([
+            // Base URI is used with relative requests
+            'base_uri' => 'http://144.6.225.24:8080/output/',
+            // You can set any number of default request options.
+            'timeout'  => 2.0,
+        ]);
         
-
-        $file->move($upload_path, $filename);
+        $response = $client->request('put','3ywO8GDrNGIKw2aWAjD3cvPLmKD.json');
         
-        return [
-            'path' => config('app.url') . "/$folder_name/$filename"
-        ];
+        $body = $response->getBody();
+        
+        file_put_contents($upload_path, $body);
+        
+//         return [
+//             'path' => config('app.url') . "/$folder_name/$filename"
+//         ];
     }
 }
