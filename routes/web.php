@@ -15,7 +15,7 @@
 Route::get('testing/yanan', 'PagesController@testing_yanan');
 Route::post('testing/yanan', 'PagesController@testing')-> name('testing');
 
-
+Route::get('analysis', 'AnalysisController@show')->name('analysis');
 
 //homepage--tentatively defined as root -waylen
 Route::get('/', 'PagesController@root')->name('root');

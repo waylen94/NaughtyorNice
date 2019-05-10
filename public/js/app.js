@@ -37053,7 +37053,10 @@ if (document.getElementById('line_chart_canvas_testing')) {
 }
 
 ;
-document.getElementById("testing_button").onclick = loadDoc;
+
+if (document.getElementById("testing_button")) {
+  document.getElementById("testing_button").onclick = loadDoc;
+}
 
 function loadDoc() {
   for (i = 1; i < 13; i++) {
@@ -37086,6 +37089,181 @@ function loadDoc() {
 
 
   chart_line_testing.update();
+}
+
+; //areachart
+
+if (document.getElementById('area_chart_canvas')) {
+  var ctx = document.getElementById('area_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      datasets: [{
+        fill: 'origin'
+      }, // 0: fill to 'origin'
+      {
+        fill: '+2'
+      }, // 1: fill to dataset 3
+      {
+        fill: 1
+      }, // 2: fill to dataset 1
+      {
+        fill: false
+      }, // 3: no fill
+      {
+        fill: '-2' // 4: fill to dataset 2
+
+      }]
+    }
+  });
+}
+
+; //barchart
+
+if (document.getElementById('bar_chart_canvas')) {
+  var ctx = document.getElementById('bar_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+}
+
+; //bubblechart
+
+var DATA_COUNT = 16;
+var MIN_XY = -150;
+var MAX_XY = 100;
+
+function generateData() {
+  var data = [];
+  var i;
+
+  for (i = 0; i < DATA_COUNT; ++i) {
+    data.push({
+      x: Math.round(Math.random() * 100),
+      y: Math.round(Math.random() * 100),
+      v: Math.round(Math.random() * 1000)
+    });
+  }
+
+  return data;
+}
+
+if (document.getElementById('bubble_chart_canvas')) {
+  var ctx = document.getElementById('bubble_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      datasets: [{
+        data: generateData()
+      }, {
+        data: generateData()
+      }]
+    }
+  });
+}
+
+; //piechart
+
+if (document.getElementById('pie_chart_canvas')) {
+  var ctx = document.getElementById('pie_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      datasets: [{
+        data: [10, 20, 30]
+      }],
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: ['Red', 'Yellow', 'Blue']
+    }
+  });
+}
+
+; //polarchart
+
+if (document.getElementById('polar_chart_canvas')) {
+  var ctx = document.getElementById('polar_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+      datasets: [{
+        data: [10, 20, 30]
+      }],
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: ['Red', 'Yellow', 'Blue']
+    }
+  });
+}
+
+; //radarchart
+
+if (document.getElementById('radar_chart_canvas')) {
+  var ctx = document.getElementById('radar_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
+      datasets: [{
+        data: [20, 10, 4, 2]
+      }]
+    },
+    options: {
+      scale: {
+        // Hides the scale
+        display: false
+      }
+    }
+  });
+}
+
+; //scattercahrt
+
+if (document.getElementById('scatter_chart_canvas')) {
+  var ctx = document.getElementById('scatter_chart_canvas').getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        label: 'Scatter Dataset',
+        data: [{
+          x: -10,
+          y: 0
+        }, {
+          x: 0,
+          y: 10
+        }, {
+          x: 10,
+          y: 5
+        }]
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          type: 'linear',
+          position: 'bottom'
+        }]
+      }
+    }
+  });
 }
 
 ;

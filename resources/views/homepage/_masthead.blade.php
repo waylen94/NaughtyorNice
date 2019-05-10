@@ -30,7 +30,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" >Know more</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href = '{{ route('analysis') }}';">Analysis</button>
                   </div>
                 </div>
               </div>
