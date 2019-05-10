@@ -44,6 +44,32 @@ var point_10 = 332;
 var point_11 = 225;
 var point_12 = 110;
 
+var json_data = [];
+$.ajax({
+    url: '../uploads/Json/htel_testing.json',
+    async: false,
+    success: function (data) {
+    	
+    	json_data = data;
+    }
+});
+var json_max = [];
+
+
+function JsonSort(json,key){
+    for(var j=1,jl=json.length;j < jl;j++){
+        var temp = json[j], val  = temp[key], i    = j-1;
+        
+        while(i >=0 && json[i][key]>val){
+            json[i+1] = json[i];
+            i = i-1;    
+        }
+        
+        json[i+1] = temp;   
+    }
+    return json;
+}
+var json_max = JsonSort(json_data,'scale');
 
 
 if(document.getElementById('line_chart_canvas_testing')){
@@ -111,22 +137,9 @@ function loadDoc(){
 //});
 	chart_line_testing.update();
 };
-//areachart
-if(document.getElementById('area_chart_canvas')){
-	var ctx = document.getElementById('area_chart_canvas').getContext('2d');
-	var myBarChart = new Chart(ctx, {
-	    type: 'bar',
-	    data: {
-	        datasets: [
-	            {fill: 'origin'},      // 0: fill to 'origin'
-	            {fill: '+2'},          // 1: fill to dataset 3
-	            {fill: 1},             // 2: fill to dataset 1
-	            {fill: false},         // 3: no fill
-	            {fill: '-2'}           // 4: fill to dataset 2
-	        ]
-	    }
-	});
-	};
+
+
+
 //barchart
 	if(document.getElementById('bar_chart_canvas')){
 		var ctx = document.getElementById('bar_chart_canvas').getContext('2d');
@@ -167,8 +180,9 @@ if(document.getElementById('area_chart_canvas')){
 		    }
 		});
 		};
+		
 //bubblechart
-		var DATA_COUNT = 16;
+		var DATA_COUNT = 2600;
 		var MIN_XY = -150;
 		var MAX_XY = 100;
 
@@ -178,9 +192,9 @@ if(document.getElementById('area_chart_canvas')){
 
 			for (i = 0; i < DATA_COUNT; ++i) {
 				data.push({
-					x: Math.round(Math.random()*100),
-					y: Math.round(Math.random()*100),
-					v: Math.round(Math.random()*1000)
+					x: i,
+					y: json_data[i].scale,
+					v: 100
 				});
 			}
 
@@ -192,13 +206,13 @@ if(document.getElementById('area_chart_canvas')){
 				type: 'bubble',
 				data: {datasets: [{
 					data: generateData()
-				}, {
-					data: generateData()
 				}]
 			}
 
 			});
 			};
+			var length = json_max.length;
+			var max1 = json_max[length-1].scale, max2 = json_max[length-2].scale, max3 = json_max[length-3].scale;
 //piechart
 			if(document.getElementById('pie_chart_canvas')){
 				var ctx = document.getElementById('pie_chart_canvas').getContext('2d');
@@ -206,14 +220,14 @@ if(document.getElementById('area_chart_canvas')){
 				    type: 'pie',
 				    data:	{
 			    	    datasets: [{
-			    	        data: [10, 20, 30]
+			    	        data: [max1, max2, max3]
 			    	    }],
 
 			    	    // These labels appear in the legend and in the tooltips when hovering different arcs
 			    	    labels: [
-			    	        'Red',
-			    	        'Yellow',
-			    	        'Blue'
+			    	        'Ranking First',
+			    	        'Rnaking Second',
+			    	        'Ranking Third'
 			    	    ]
 			    	}
 				});
@@ -256,35 +270,3 @@ if(document.getElementById('area_chart_canvas')){
 						    }
 						    });
 						};
-//scattercahrt
-if(document.getElementById('scatter_chart_canvas')){
-	var ctx = document.getElementById('scatter_chart_canvas').getContext('2d');
-		var myBarChart = new Chart(ctx, {
-			type: 'scatter',
-				data: {
-					datasets: [{
-			            label: 'Scatter Dataset',
-			            data: [{
-			                x: -10,
-			                y: 0
-			            }, {
-			                x: 0,
-			                y: 10
-			            }, {
-			                x: 10,
-			                y: 5
-			            }]
-			        }]
-			    },
-			    options: {
-			        scales: {
-			            xAxes: [{
-			                type: 'linear',
-			                position: 'bottom'
-			            }]
-			        }
-			    }
-			});
-		};
-								        
-

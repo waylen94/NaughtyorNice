@@ -13,7 +13,7 @@ class JsonRetrieveHandler
 
         $folder_name = "uploads/Json" ;
         $filename = $file_prefix . '.' . "json";
-        $upload_path = resource_path() . '/' . $folder_name . '/'. $filename;
+        $upload_path = public_path() . '/' . $folder_name . '/'. $filename;
 
         
         // retrieve the jason data , in the future the request file will be dynamic
@@ -30,6 +30,8 @@ class JsonRetrieveHandler
         $body = $response->getBody();
         
         file_put_contents($upload_path, $body);
+        
+        //dealing with the statistics processing
         
 //         return [
 //             'path' => config('app.url') . "/$folder_name/$filename"
