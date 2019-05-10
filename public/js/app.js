@@ -37034,26 +37034,22 @@ $.ajax({
     json_data = data;
   }
 });
-var json_max = [];
+var json_copy_list = [];
 
-function JsonSort(json, key) {
-  for (var j = 1, jl = json.length; j < jl; j++) {
-    var temp = json[j],
-        val = temp[key],
-        i = j - 1;
-
-    while (i >= 0 && json[i][key] > val) {
-      json[i + 1] = json[i];
-      i = i - 1;
-    }
-
-    json[i + 1] = temp;
-  }
-
-  return json;
+function sortNumber(a, b) {
+  return a - b;
 }
 
-var json_max = JsonSort(json_data, 'scale');
+function jsonCopyList(json, key) {
+  for (var j = 0, jl = json.length; j < jl; j++) {
+    json_copy_list.push(json[j].scale);
+  }
+
+  return json_copy_list;
+}
+
+var json_copy_list = jsonCopyList(json_data, 'scale');
+json_copy_list = json_copy_list.sort(sortNumber);
 
 if (document.getElementById('line_chart_canvas_testing')) {
   var ctx = document.getElementById('line_chart_canvas_testing').getContext('2d');
@@ -37149,15 +37145,11 @@ if (document.getElementById('bar_chart_canvas')) {
 
 ; //bubblechart
 
-var DATA_COUNT = 2600;
-var MIN_XY = -150;
-var MAX_XY = 100;
-
 function generateData() {
   var data = [];
   var i;
 
-  for (i = 0; i < DATA_COUNT; ++i) {
+  for (i = 0; i < json_data.length; ++i) {
     data.push({
       x: i,
       y: json_data[i].scale,
@@ -37180,11 +37172,7 @@ if (document.getElementById('bubble_chart_canvas')) {
   });
 }
 
-;
-var length = json_max.length;
-var max1 = json_max[length - 1].scale,
-    max2 = json_max[length - 2].scale,
-    max3 = json_max[length - 3].scale; //piechart
+; //piechart
 
 if (document.getElementById('pie_chart_canvas')) {
   var ctx = document.getElementById('pie_chart_canvas').getContext('2d');
@@ -37192,7 +37180,7 @@ if (document.getElementById('pie_chart_canvas')) {
     type: 'pie',
     data: {
       datasets: [{
-        data: [max1, max2, max3]
+        data: [json_copy_list[json_copy_list.length - 1], json_copy_list[json_copy_list.length - 2], json_copy_list[json_copy_list.length - 3]]
       }],
       // These labels appear in the legend and in the tooltips when hovering different arcs
       labels: ['Ranking First', 'Rnaking Second', 'Ranking Third']
