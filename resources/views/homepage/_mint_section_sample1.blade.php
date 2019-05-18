@@ -1,18 +1,26 @@
 
  <section class="page-section1" id="page-section1">
+ <div class = "row">
+<div class="col-xl-1"></div>
  <!-- Area Chart -->
-<div class="card shadow mb-4" id="line_chart">
-    <div class="card-header py-3">
-   		<h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-    </div>
-    <div class="card-body">
-        <div class="chart-area">
-<!--         	<canvas id="bar_chart_canvas"></canvas> -->
-            <div class="container" id = "deco7861">
-            </div>
-        </div>
-        	<hr>
-    </div>
-</div>
+<div class="card shadow col-xl-10">
+    <div class="card-header d-flex flex-row">
+    <div class="p-2 m-0 font-weight-bold text-primary">
+    Network Graph
+   	</div>
+   	<form action="{{ route('upload') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
 
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+   	 <div class="form-group"><input type="file" name="network_json" class="form-control-file"> 
+           <button type="submit" class="btn btn-primary">upload</button>
+           </div>
+   	 </form>
+    </div>
+<!--         	<canvas id="bar_chart_canvas"></canvas> -->
+    <div class="container" id = "deco7861">
+    </div>
+    
+    <div class="col-xl-1"></div>
+</div>
+</div>
  </section>
