@@ -17,7 +17,7 @@ Route::post('testing/yanan', 'PagesController@testing')-> name('testing');
 
 Route::get('analysis', 'AnalysisController@show')->name('analysis');
 
-Route::put('visualization', 'VisualizationNetworkController@upload')->name('upload');
+Route::match(array('patch', 'put'),'visualization', 'VisualizationNetworkController@upload')->name('upload');
 
 
 //homepage--tentatively defined as root -waylen
