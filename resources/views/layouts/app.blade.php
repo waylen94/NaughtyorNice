@@ -32,6 +32,7 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="js/vis.js"></script>
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
