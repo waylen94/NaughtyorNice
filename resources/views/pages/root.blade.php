@@ -8,9 +8,4 @@
 	@include('homepage._mint_section_sample3')
 	@include('homepage._mint_section_sample4')
 	@include('homepage._mint_section_sample5')
-
-  
-   
-  
-  
 @stop
