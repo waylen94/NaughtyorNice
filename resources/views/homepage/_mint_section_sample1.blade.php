@@ -9,7 +9,7 @@
     Network Graph
    	</div>
    	<form action="{{ route('upload') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
-
+		<input type="hidden" name="_method" value="PUT">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
    	 <div class="form-group"><input type="file" name="network_json" class="form-control-file"> 
            <button type="submit" class="btn btn-primary">upload</button>
