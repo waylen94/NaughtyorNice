@@ -290,16 +290,28 @@ if(document.getElementById('deco7861')){
 
     // create a network
     var container = document.getElementById('deco7861');
-
+    
+    
+    nodes.update({id:1, color:"red"});
+    nodes.update({id:2, color:"red"});
+    nodes.update({id:3, color:"red"});
     // provide the data in the vis format
     var data = {
         nodes: nodes,
         edges: edges
     };
-    var options = {};
+    var options = {
 
+    };
+    
+    
+    
     // initialize your network!
     var network = new vis.Network(container, data, options);
+    network.focus("1");
+    network.focus("2");
+    network.focus("3");
+    network.redraw();
 }
 						
 						
