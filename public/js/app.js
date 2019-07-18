@@ -37259,16 +37259,28 @@ if (document.getElementById('deco7861')) {
 
   var container = document.getElementById('deco7861');
   nodes.update({
-    id: 1,
-    color: "red"
-  });
-  nodes.update({
-    id: 2,
-    color: "red"
-  });
-  nodes.update({
     id: 3,
     color: "red"
+  });
+  nodes.update({
+    id: 7,
+    color: "red"
+  });
+  nodes.update({
+    id: 8,
+    color: "red"
+  });
+  nodes.update({
+    id: 100,
+    color: "blue"
+  });
+  nodes.update({
+    id: 102,
+    color: "blue"
+  });
+  nodes.update({
+    id: 106,
+    color: "blue"
   }); // provide the data in the vis format
 
   var data = {
@@ -37278,9 +37290,9 @@ if (document.getElementById('deco7861')) {
   var options = {}; // initialize your network!
 
   var network = new vis.Network(container, data, options);
-  network.focus("1");
-  network.focus("2");
   network.focus("3");
+  network.focus("7");
+  network.focus("8");
   network.redraw();
 }
 
