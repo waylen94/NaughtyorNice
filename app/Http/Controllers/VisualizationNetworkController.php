@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Handlers\JsonUploadingHandler;
-
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+use App\Models\JsonStorage;
 
 class VisualizationNetworkController extends Controller
 {
-    public function upload(Request $request, JsonUploadingHandler $uploader)
+    public function upload(Request $request, JsonStorage $jsonstorage)
     {
-        if($request->network_json){
-            $uploader->save($request->network_json);
-        }
-        return view('pages.root');
+        
+        $jsonstorage->fill($request->all());  
+        $path = $request->file('file_content')->store('file_content');
+        $contents = Storage::get($path);
+        $jsonstorage->file_content = $contents;
+        Storage::delete($path);
+        
+        $jsonstorage->save();
+        return redirect()->route('root');
     }
 }

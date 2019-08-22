@@ -1,5 +1,4 @@
-
- <section class="page-section1" id="page-section1">
+<section class="page-section1" id="page-section1">
  <div class = "row">
 <div class="col-xl-1"></div>
  <!-- Area Chart -->
@@ -11,18 +10,28 @@
    	</div>
    	
    	<form action="{{ route('upload') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+   	
 		<input type="hidden" name="_method" value="PUT">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-   	 <div class="form-group">
-   	 <div class ="row">
-   	 	<div class = "col-xl-7">
-       	 <input type="file" name="network_json" class="form-control-file"> 
-       	 </div>
-       	 <div class = "col-xl-2">
-           <button type="submit" class="btn btn-primary">upload</button>
-           </div>
-           </div>
-           </div>
+   	 
+   	 	<div class ="row">
+       	  <!-- File Uploading Area -->
+       	 	<div class="form-group col-md-4"> 
+           	 <input type="file" name="file_content" class="form-control-file"> 
+           	 </div>
+           	 <!-- Name Mark Area -->
+           	 <div class="form-group col-md-3">
+           	 <input id="name" name="name" type="text" placeholder = "Your Name" class="form-control form-control-sm">
+           	 </div>
+           	 <div class="form-group col-md-3">
+           	 <input id="filename" name="file_name" type="text" placeholder = "File Name" class="form-control form-control-sm">
+           	 </div> 	 
+           	 <!-- Submit Area -->
+           	 <div class = "col-md-2">
+               <button type="submit" class="btn btn-primary">upload</button>
+               </div>
+          </div>
+               
    	 </form>
    	 
     </div>   
