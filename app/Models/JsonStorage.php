@@ -9,4 +9,7 @@ class JsonStorage extends Model
     protected $fillable = [
         'name', 'file_name', 'file_content'
     ];
+//     protected $casts = [
+//         'file_content' => 'json',
+//     ];
 }

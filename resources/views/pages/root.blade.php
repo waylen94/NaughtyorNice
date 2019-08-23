@@ -2,7 +2,11 @@
 @section('title', 'Homepage')
 
 @section('content')
+	@include('homepage.deco7861_section')
+@stop
 
-	@include('homepage._mint_section_sample1')
-
+@section("json")
+<script>
+	var json_data_diagram =  {{!!trim($json_storages->file_content,"{}")!!}};
+</script>
 @stop

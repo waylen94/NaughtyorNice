@@ -1,5 +1,7 @@
 <section class="page-section1" id="page-section1">
  <div class = "row">
+ 
+     <!-- center?? -->
 <div class="col-xl-1"></div>
  <!-- Area Chart -->
 <div class="card shadow col-xl-10">
@@ -39,8 +41,9 @@
 <!--         	<canvas id="bar_chart_canvas"></canvas> -->
     <div class="container" id = "deco7861">
     </div>
-    
+    <!-- center?? -->
     <div class="col-xl-1"></div>
 </div>
 </div>
+<h1>{{$json_storages->file_content}}</h1>
  </section>

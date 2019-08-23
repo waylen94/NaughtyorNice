@@ -18,7 +18,7 @@ class CreateJsonStoragesTable extends Migration
             $table->timestamps();
             $table->string('file_name')->index();
             $table->string('name')->index();
-            $table->json('file_content');
+            $table->string('file_content');
         });
     }
 

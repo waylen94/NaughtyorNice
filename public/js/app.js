@@ -49472,19 +49472,12 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 if (document.getElementById('deco7861')) {
-  $.ajax({
-    url: '../uploads/Json/data_network.json',
-    async: false,
-    success: function success(data) {
-      json_data = data;
-    }
-  });
   vis_dataset_id_label = [];
 
-  for (var j = 0, jl = json_data.node.length; j < jl; j++) {
+  for (var j = 0, jl = json_data_diagram.node.length; j < jl; j++) {
     vis_dataset_id_label.push({
-      id: json_data.node[j][0],
-      label: json_data.node[j][1]
+      id: json_data_diagram.node[j][0],
+      label: json_data_diagram.node[j][1]
     });
   }
 
@@ -49492,10 +49485,10 @@ if (document.getElementById('deco7861')) {
 
   vis_dataset_connection = [];
 
-  for (var j = 0, jl = json_data.edge.length; j < jl; j++) {
+  for (var j = 0, jl = json_data_diagram.edge.length; j < jl; j++) {
     vis_dataset_connection.push({
-      from: json_data.edge[j][0],
-      to: json_data.edge[j][1],
+      from: json_data_diagram.edge[j][0],
+      to: json_data_diagram.edge[j][1],
       arrows: 'to'
     });
   }

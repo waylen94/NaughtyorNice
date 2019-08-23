@@ -1,16 +1,10 @@
 
 if(document.getElementById('deco7861')){
-	$.ajax({
-	    url: '../uploads/Json/data_network.json',
-	    async: false,
-	    success: function (data) {
-	    	
-	    	json_data = data;
-	    }
-	});
+	
 	vis_dataset_id_label = []
-	for(var j=0,jl=json_data.node.length;j < jl;j++){
-        vis_dataset_id_label.push({id: json_data.node[j][0],label: json_data.node[j][1]});
+	
+	for(var j=0,jl=json_data_diagram.node.length;j < jl;j++){
+        vis_dataset_id_label.push({id: json_data_diagram.node[j][0],label: json_data_diagram.node[j][1]});
     }
 	
 	
@@ -18,8 +12,8 @@ if(document.getElementById('deco7861')){
 
     // create an array with edges
 	vis_dataset_connection = []
-	for(var j=0,jl=json_data.edge.length;j < jl;j++){
-        vis_dataset_connection.push({from: json_data.edge[j][0],to: json_data.edge[j][1], arrows:'to'});
+	for(var j=0,jl=json_data_diagram.edge.length;j < jl;j++){
+        vis_dataset_connection.push({from: json_data_diagram.edge[j][0],to: json_data_diagram.edge[j][1], arrows:'to'});
     }
     var edges = new vis.DataSet(vis_dataset_connection);
 
@@ -43,8 +37,6 @@ if(document.getElementById('deco7861')){
     var options = {
 
     };
-    
-    
     
     // initialize your network!
     var network = new vis.Network(container, data, options);
