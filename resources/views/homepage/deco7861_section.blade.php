@@ -23,10 +23,10 @@
            	 </div>
            	 <!-- Name Mark Area -->
            	 <div class="form-group col-md-3">
-           	 <input id="name" name="name" type="text" placeholder = "Your Name" class="form-control form-control-sm">
+           	 <input id="name" name="name" type="text" placeholder = "Your Name" class="form-control form-control-sm" value = "Your Name">
            	 </div>
            	 <div class="form-group col-md-3">
-           	 <input id="filename" name="file_name" type="text" placeholder = "File Name" class="form-control form-control-sm">
+           	 <input id="filename" name="file_name" type="text" placeholder = "File Name" class="form-control form-control-sm" value = "Diagram name">
            	 </div> 	 
            	 <!-- Submit Area -->
            	 <div class = "col-md-2">
@@ -45,7 +45,8 @@
     <div class="col-xl-1"></div>
 </div>
 </div>
-<h1>{{$json_storages->file_content}}</h1>
+
+<h1>uploader name: {{$json_storages->name}}</h1>
 
 
 
@@ -54,7 +55,7 @@
     <div class="card ">
       <div class="card-header">
         <h1>
-          Platewaste
+          History Log
         </h1>
       </div>
 
@@ -63,7 +64,7 @@
           <table class="table table-sm table-striped">
             <thead>
               <tr>
-                <th>File ID</th> <th>Uploader Name</th> <th>Diagram Name</th>
+                <th>File ID</th> <th>Uploader Name</th> <th>Diagram Name</th> <th> View Diagram</th>
 
               </tr>
             </thead>
@@ -72,6 +73,14 @@
               <tr>
 
                 <td>{{$json_file->id}}</td> <td>{{$json_file->name}}</td> <td>{{$json_file->file_name}}</td> 
+                
+                <td>
+                 <div class="operate">
+            <a href="{{ route('json.show', $json_file->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+              <i class="far fa-eye"></i> Render
+            </a>
+          </div>
+                </td>
                 </tr>
               @endforeach
             </tbody>

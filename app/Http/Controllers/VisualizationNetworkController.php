@@ -18,9 +18,7 @@ class VisualizationNetworkController extends Controller
         $contents = Storage::get($path);
         $jsonstorage->file_content = $contents;
         Storage::delete($path);
-        
         $jsonstorage->save();
-        
         $json_storages = $jsonstorage;
         $json_storages_page = DB::table('json_storages')->paginate(3);
         
