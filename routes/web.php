@@ -19,9 +19,11 @@ Route::get('analysis', 'AnalysisController@show')->name('analysis');
 
 Route::match(array('patch', 'put'),'visualization', 'VisualizationNetworkController@upload')->name('upload');
 
-
+Route::get('/json_storages/{json_storage}', 'JsonStoragesController@show')->name('json.show');
 //homepage--tentatively defined as root -waylen
 Route::get('/', 'PagesController@root')->name('root');
+
+
 
 
 //for testing i will not use the Auth::router aftering developing i will change this phrase --waylen

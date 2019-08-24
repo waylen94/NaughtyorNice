@@ -46,4 +46,42 @@
 </div>
 </div>
 <h1>{{$json_storages->file_content}}</h1>
- </section>
+
+
+
+<div class="container history-log">
+  <div class="col-md-10 offset-md-1">
+    <div class="card ">
+      <div class="card-header">
+        <h1>
+          Platewaste
+        </h1>
+      </div>
+
+      <div class="card-body">
+        @if($json_storages_page->count())
+          <table class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th>File ID</th> <th>Uploader Name</th> <th>Diagram Name</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($json_storages_page as $json_file)
+              <tr>
+
+                <td>{{$json_file->id}}</td> <td>{{$json_file->name}}</td> <td>{{$json_file->file_name}}</td> 
+                </tr>
+              @endforeach
+            </tbody>
+          </table>
+          {!! $json_storages_page->render() !!}
+        @else
+          <h3 class="text-xs-center alert alert-info">Empty!</h3>
+        @endif
+      </div>
+    </div>
+  </div>
+</div>
+</section>

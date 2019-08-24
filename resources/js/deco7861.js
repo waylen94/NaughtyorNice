@@ -37,7 +37,6 @@ if(document.getElementById('deco7861')){
     var options = {
 
     };
-    
     // initialize your network!
     var network = new vis.Network(container, data, options);
     network.focus("3");
