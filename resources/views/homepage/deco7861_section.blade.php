@@ -1,4 +1,5 @@
 <section class="page-section1" id="page-section1">
+
  <div class = "row">
  
      <!-- center?? -->
