@@ -46,7 +46,6 @@
 </div>
 </div>
 
-<h1>uploader name: {{$json_storages->name}}</h1>
 
 
 
@@ -94,3 +93,14 @@
   </div>
 </div>
 </section>
+
+
+@section("json")
+<script>
+	var json_data_diagram =  {{!!trim($json_storages->file_content,"{}")!!}};
+</script>
+@stop
+
+@section('vis-scripts')
+  <script type="text/javascript" src="{{ asset('js/vis.js') }}"></script>
+@stop
