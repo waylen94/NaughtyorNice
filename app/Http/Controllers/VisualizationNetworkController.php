@@ -22,6 +22,6 @@ class VisualizationNetworkController extends Controller
         $json_storages = $jsonstorage;
         $json_storages_page = DB::table('json_storages')->paginate(3);
         
-        return view('pages.root',compact("json_storages","json_storages_page"));
+        return redirect()->route('json.show',[$json_storages]);
     }
 }
