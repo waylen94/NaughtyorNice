@@ -3,9 +3,24 @@
  <div class = "row">
  
      <!-- center?? -->
-<div class="col-xl-1"></div>
+<div class="col-xl-1">
+          
+          
+          
+	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-1">
+	        <i class="fas fa-sync-alt" aria-hidden="true"> Fixed Shuffle</i>
+	    </button>
+	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-2">
+	        <i class="fas fa-sync-alt" aria-hidden="true"> Dynamic Shuffle</i>
+	    </button>
+    
+    
+    </div>
  <!-- Area Chart -->
 <div class="card shadow col-xl-10">
+    
+    
+    
     <div class="card-header d-flex flex-row">
     <div class ="row">
     <div class="p-2 m-0 font-weight-bold text-primary">
