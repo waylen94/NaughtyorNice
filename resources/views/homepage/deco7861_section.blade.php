@@ -7,10 +7,10 @@
           
           
           
-	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-1">
+	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="fix_shuffle">
 	        <i class="fas fa-sync-alt" aria-hidden="true"> Fixed Shuffle</i>
 	    </button>
-	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-2">
+	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="dyn_shuffle">
 	        <i class="fas fa-sync-alt" aria-hidden="true"> Dynamic Shuffle</i>
 	    </button>
     
