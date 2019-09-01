@@ -120,7 +120,12 @@ if(document.getElementById('deco7861')){
 			}
 
 			function dynshuffle(){
-				
+				var node_items = nodes.get();
+				var detection_times = (node_items.length / 5).toFixed(0);
+				while(detection_times > 0){
+					fixshuffle();
+					detection_times--;
+				}
 
 			}
 	}
